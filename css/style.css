@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+#Clock{
+    display: flex;
+    gap: 40px;
+    color: white;
+} 
+#Clock .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Clock div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#Clock .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#Clock .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+#Clock .circle svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}
+#Clock .ap{
+    position: relative;
+    font: 1em;
+    transform: translateX(-20px);
+}
+.dots{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    
+}
+.dots::before
+{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+
+}
